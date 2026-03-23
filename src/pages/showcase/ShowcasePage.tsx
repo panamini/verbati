@@ -66,12 +66,12 @@ export function ShowcasePage() {
                   <Card padding="lg" className="rounded-surface border-borderStrong">
                     <Stack space="md">
                       <Stack space="sm">
-                        <p className="m-0 text-sm font-semibold uppercase tracking-[0.12em] text-accentHover">Hero</p>
+                        <p className="m-0 text-sm font-semibold uppercase tracking-[0.12em] text-accentHover">Preview story</p>
                         <h2 className="m-0 font-editorial text-2xl tracking-[-0.02em] text-heading">
                           Brand system preview
                         </h2>
                         <p className="m-0 max-w-[54ch] text-base text-textMuted">
-                          Accent, surfaces, and text come from the current composed theme, with type and radius applied alongside it.
+                       Accent, surfaces, and text come from the current composed theme, with type and radius applied alongside it.
                         </p>
                       </Stack>
 
@@ -145,8 +145,8 @@ export function ShowcasePage() {
               <Card padding="lg" className="rounded-surface">
                 <Stack space="md">
                   <Cluster justify="between" align="center">
-                    <p className="m-0 text-sm font-semibold uppercase tracking-[0.12em] text-accentHover">Harmony</p>
-                    <Pill>Global source</Pill>
+                    <p className="m-0 text-sm font-semibold uppercase tracking-[0.12em] text-accentHover">Palette</p>
+                    <Pill>Live preview</Pill>
                   </Cluster>
 
                   <div className="grid grid-cols-2 gap-2 sm:grid-cols-4">

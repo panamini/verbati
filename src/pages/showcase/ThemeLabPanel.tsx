@@ -224,9 +224,9 @@ export function ThemeLabPanel() {
       : "Clear saved custom";
   const exportValue = exportView === "theme" ? exportThemeCss : exportSiteCss;
   const exportHint =
-    exportView === "theme"
-      ? "Canonical theme tokens"
-      : "Starter CSS built on canonical theme tokens";
+  exportView === "theme"
+    ? "Source-of-truth theme tokens"
+    : "Ready-made starter layer built on the theme tokens";
 
   const handleCopyExport = async () => {
     try {
@@ -257,8 +257,8 @@ export function ThemeLabPanel() {
           <Cluster justify="between" align="start" className="gap-3">
             <Stack space="xs" className="min-w-0">
               <p className="m-0 text-xs font-semibold uppercase tracking-[0.14em] text-accentHover">Theme Lab</p>
-              <h1 className="m-0 text-xl font-heading tracking-[-0.02em] text-heading">V2 control console</h1>
-              <p className="m-0 text-sm text-textSubtle">Compact controls. Stable preview.</p>
+              <h1 className="m-0 text-xl font-heading tracking-[-0.02em] text-heading">Studio</h1>
+              <p className="m-0 text-sm text-textSubtle">Refine the theme. Preview the result live.</p>
             </Stack>
             <ThemeSwitch />
           </Cluster>
@@ -454,8 +454,7 @@ export function ThemeLabPanel() {
         </Stack>
       </ThemeLabSection>
 
-      <ThemeLabSection label="Type" title="Locked pairing" hint="Pairing changes both heading and body.">
-        <Stack space="sm">
+      <ThemeLabSection label="Type" title="Typography" hint="Pairing changes both heading and body.">        <Stack space="sm">
           <Select
             id="lab-font-pair"
             value={selectedPairId}
