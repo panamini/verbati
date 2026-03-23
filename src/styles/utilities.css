@@ -1,0 +1,201 @@
+  /* =========================================================
+     DASTI utilities — v1 migration-safe rewrite
+     Scope: generic layout primitives only.
+     Product- or screen-specific rules must stay elsewhere.
+     ========================================================= */
+
+  /* ---------------------------------------------------------
+     Container
+     --------------------------------------------------------- */
+  .container-ds,
+  .u-container,
+  .container {
+    width: min(100% - (2 * var(--gutter-mobile, 16px)), var(--container-lg, var(--container, 1100px)));
+    margin-inline: auto;
+    min-width: 0;
+  }
+
+  .container-wide {
+    width: min(100% - (2 * var(--gutter-mobile, 16px)), var(--container-xl, 1280px));
+    margin-inline: auto;
+    min-width: 0;
+  }
+
+  /* ---------------------------------------------------------
+     Stack primitives
+     --------------------------------------------------------- */
+  .stack-1 > * + * {
+    margin-top: var(--space-01, 4px);
+  }
+
+  .stack-2 > * + * {
+    margin-top: var(--space-02, 8px);
+  }
+
+  .stack-3 > * + * {
+    margin-top: var(--space-03, 12px);
+  }
+
+  .stack-4 > * + * {
+    margin-top: var(--space-04, 16px);
+  }
+
+  .stack-5 > * + * {
+    margin-top: var(--space-05, 24px);
+  }
+
+  /* Legacy app aliases kept for compatibility. */
+  .u-stack-sm,
+  .u-stack-md,
+  .u-stack-lg {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+  }
+
+  .u-stack-sm {
+    gap: var(--space-1, 8px);
+  }
+
+  .u-stack-md {
+    gap: var(--space-2, 16px);
+  }
+
+  .u-stack-lg {
+    gap: var(--space-3, 24px);
+  }
+
+  /* ---------------------------------------------------------
+     Cluster primitives
+     --------------------------------------------------------- */
+  .cluster-1,
+  .cluster-2,
+  .cluster-3 {
+    display: flex;
+    flex-wrap: wrap;
+    min-width: 0;
+  }
+
+  .cluster-1 {
+    gap: var(--space-01, 4px);
+  }
+
+  .cluster-2 {
+    gap: var(--space-02, 8px);
+  }
+
+  .cluster-3 {
+    gap: var(--space-03, 12px);
+  }
+
+  .cluster-center {
+    align-items: center;
+  }
+
+  .cluster-between {
+    justify-content: space-between;
+  }
+
+  .u-cluster-md {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    min-width: 0;
+    gap: var(--space-1, 8px);
+  }
+
+  /* ---------------------------------------------------------
+     Grid primitives
+     --------------------------------------------------------- */
+  .grid-1,
+  .grid-2,
+  .grid-3,
+  .u-grid-2,
+  .u-grid-3 {
+    display: grid;
+    min-width: 0;
+    gap: var(--space-03, 12px);
+  }
+
+  .grid-1 {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .grid-2,
+  .u-grid-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .grid-3,
+  .u-grid-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  /* ---------------------------------------------------------
+     Scroll region / inset helpers
+     --------------------------------------------------------- */
+  .scroll-region {
+    min-width: 0;
+    min-height: 0;
+    overflow: auto;
+    overscroll-behavior: contain;
+    scrollbar-gutter: stable;
+  }
+
+  .inset-1 {
+    padding: var(--space-01, 4px);
+  }
+
+  .inset-2 {
+    padding: var(--space-02, 8px);
+  }
+
+  .inset-3 {
+    padding: var(--space-03, 12px);
+  }
+
+  .inset-4 {
+    padding: var(--space-04, 16px);
+  }
+
+  .inset-5 {
+    padding: var(--space-05, 24px);
+  }
+
+  /* ---------------------------------------------------------
+     Responsive adjustments
+     --------------------------------------------------------- */
+  @media (min-width: 768px) {
+    .container-ds,
+    .u-container,
+    .container,
+    .container-wide {
+      width: min(100% - (2 * var(--gutter-tablet, 24px)), var(--container-lg, var(--container, 1100px)));
+    }
+
+    .container-wide {
+      width: min(100% - (2 * var(--gutter-tablet, 24px)), var(--container-xl, 1280px));
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .container-ds,
+    .u-container,
+    .container {
+      width: min(100% - (2 * var(--gutter-desktop, 32px)), var(--container-lg, var(--container, 1100px)));
+    }
+
+    .container-wide {
+      width: min(100% - (2 * var(--gutter-desktop, 32px)), var(--container-xl, 1280px));
+    }
+  }
+
+  @media (max-width: 1023px) {
+    .grid-2,
+    .grid-3,
+    .u-grid-2,
+    .u-grid-3 {
+      grid-template-columns: minmax(0, 1fr);
+    }
+  }
+
