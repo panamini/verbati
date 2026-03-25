@@ -23,6 +23,16 @@ export const themeMoods: ThemeMood[] = [
     shortHint: "Calm, balanced, premium",
   },
   {
+  id: "resume-calm",
+  label: "Resume Calm",
+  baseColor: "#8A634A",
+  paletteType: "analogous",
+  globalHue: 0,
+  globalSaturation: -3,
+  globalLightness: 2,
+  shortHint: "Quiet, warm, editorial résumé tone",
+},
+  {
     id: "slate-signal",
     label: "Slate Signal",
     baseColor: "#5B64C8",

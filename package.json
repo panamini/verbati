@@ -1,9 +1,9 @@
 {
-  "name": "dasti-theme-lab",
+  "name": "verbati",
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://panamini.github.io/dasti-theme-lab",
+  "homepage": "https://panamini.github.io/verbati",
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
